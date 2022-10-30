@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-
 namespace DynamicPolymorphism
 {
     class Program
@@ -21,15 +20,15 @@ namespace DynamicPolymorphism
             int output;
 
             Circle circle = new Circle(radius);
-            output = circle.area();
+            output = circle.Area();
             Console.WriteLine("\nArea of Circle is " + output);
 
             Square square = new Square(sideLen);
-            output = square.area();
+            output = square.Area();
             Console.WriteLine("\nArea of Square is " + output);
 
             Rectangle rectangle = new Rectangle(length, breadth);
-            output = rectangle.area();
+            output = rectangle.Area();
             Console.WriteLine("\nArea of Rectangle is " + output);
 
 
@@ -43,7 +42,7 @@ namespace DynamicPolymorphism
     {
         public double PI = Math.PI;
 
-        public abstract int area();
+        public abstract int Area();
     }
 
     class Circle : Shape
@@ -55,7 +54,7 @@ namespace DynamicPolymorphism
             this.radius = radius;
         }
 
-        public override int area()
+        public override int Area()
         {
             int circleArea = (int)(PI * radius * radius);
 
@@ -72,7 +71,7 @@ namespace DynamicPolymorphism
             this.sideLen = sideLen;
         }
 
-        public override int area()
+        public override int Area()
         {
             int squareArea = sideLen * sideLen;
 
@@ -90,7 +89,7 @@ namespace DynamicPolymorphism
             this.breadth = breadth;
         }
         
-        public override int area()
+        public override int Area()
         {
             int rectangleArea = length * breadth;
 
